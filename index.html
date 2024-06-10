@@ -3,75 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
+    <title>adadadada</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
             color: #333;
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
         .container {
-            max-width: 600px;
+            max-width: 100%; /* Ensures container spans full width */
             margin: 0 auto;
             background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
+            padding: 0; /* No padding to allow image to stretch fully */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .info-section {
-            margin-bottom: 20px;
-            text-align: left;
+        /* Hide both images by default */
+        .img-mobile, .img-desktop {
+            display: none;
+            width: 100%; /* Set image width to 100% of the container */
+            height: auto; /* Maintain aspect ratio */
         }
-        .info-section label {
-            display: inline-block;
-            width: 200px;
-            font-weight: bold;
+        /* Display the mobile image on small screens */
+        @media (max-width: 768px) {
+            .img-mobile {
+                display: block;
+            }
         }
-        .info-section input {
-            width: 300px;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        .buttons {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        .button {
-            background-color: #f2f2f2;
-            padding: 10px 20px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            margin: 0 10px;
-            cursor: pointer;
-        }
-        .housing-section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .housing-item {
-            background-color: #f2f2f2;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            margin: 10px;
-            width: 200px;
-            text-align: left;
-        }
-        .visa-status {
-            background-color: #f2f2f2;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            margin-top: 20px;
-            font-weight: bold;
+        /* Display the desktop image on larger screens */
+        @media (min-width: 769px) {
+            .img-desktop {
+                display: block;
+            }
         }
     </style>
 </head>
 <body>
-<img src="ss.jpg" width="100%">
+    <div class="container">
+        <img class="img-mobile" src="ss.jpg" alt="Mobile Image">
+        <img class="img-desktop" src="ss_l.jpg" alt="Desktop Image">
+    </div>
 </body>
 </html>
