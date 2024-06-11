@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hajj Card Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 100%; /* Ensures container spans full width */
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 0; /* No padding to allow image to stretch fully */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Hide both images by default */
+        .img-mobile, .img-desktop {
+            display: none;
+            width: 100%; /* Set image width to 100% of the container */
+            height: auto; /* Maintain aspect ratio */
+        }
+        /* Display the mobile image on small screens */
+        @media (max-width: 768px) {
+            .img-mobile {
+                display: block;
+            }
+        }
+        /* Display the desktop image on larger screens */
+        @media (min-width: 769px) {
+            .img-desktop {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="img-mobile" src="/en-US/images/sabeer-m.jpg" alt="Mobile Image">
+        <img class="img-desktop" src="/en-US/images/sabeer-d.jpg" alt="Desktop Image">
+    </div>
+</body>
+</html>
